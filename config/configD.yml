@@ -1,0 +1,54 @@
+# config
+# model
+## support SegNet_AlexNet, SegNet_VGG, SegNet_ResNet18, SegNet_ResNet34, SegNet_ResNet50, SegNet_ResNet101, SegNet_ResNet152
+## FPN_ResNet18, FPN_ResNet50, FPN_ResNet101, FPN_ResNet34, FPN_ResNet152
+## FCN_AlexNet, FCN_VGG, FCN_ResNet18, FCN_ResNet50, FCN_ResNet101, FCN_ResNet34, FCN_ResNet152
+## UNet_VGG
+#### model configuration for UNet_1
+model_name: UNet # choose from FPN, FCN, SegNet, UNet
+backbone: VGG # choose from AlexNet, VGG, ResNet18, ResNet50, ResNet101
+#### reversible regression model
+rev_model: True # use model_2 or not
+#### model configuration for UNet_2
+model_2_name: UNet # choose from FPN, FCN, SegNet, UNet
+backbone_2: VGG # choose from AlexNet, VGG, ResNet18, ResNet50, ResNet101
+
+# dataset path
+data_root: /mnt/zhengxiaohu_data/datasetD2_buttom005_noise
+# data_root: samples/data/
+# data_root: dataset/data_normal/datasetD
+
+# train/val set
+train_list: train/train_val.txt
+
+# test set
+## choose the test set: test_0.txt, test_1.txt, test_2.txt, test_3.txt,test_4.txt,test_5.txt,test_6.txt
+test_list: test/test_well.txt
+
+# dataset format: mat or h5
+data_format: mat
+batch_size: 16 # Generate noisy data, batch_size=1
+max_epochs: 1000
+lr: 0.01
+
+# which gpu to use
+gpu: 4 # 0 cpu, 1 gpu:0, 2 gpu:1
+val_check_interval: 1.0
+
+# num_workers in dataloader
+num_workers: 4
+
+# preprocessing of data
+## input
+input_size: 200
+mean_layout: 298
+std_layout: 50
+## output
+mean_heat: 298
+std_heat: 50
+
+mode: plot #train #plot #interval_prob # predict data_noise
+
+# D2_02noise:9  D2_01noise:6  D2_005noise:7  D2_01leftnoise:8 
+# D2_top005_noise:12  D2_buttom005_noise:14  
+test_check_num: 14

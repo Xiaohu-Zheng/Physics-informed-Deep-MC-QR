@@ -1,0 +1,223 @@
+angles:
+- 0
+- 0
+- 0
+- 0
+- 0
+- 0
+- 0
+- 0
+- 0
+- 0
+- 0
+- 0
+- 0
+- 0
+- 0
+- 0
+- 0
+- 0
+- 0
+bcs:
+- - sink
+  - - - 0.045
+      - 0.1
+    - - 0.055
+      - 0.1
+config: config_D.yml
+data_dir: datasetD2/train/train
+fem_degree: '1'
+file_format: mat
+gaussian_param: '1'
+geometry:
+- rectangle
+- rectangle
+- capsule
+- circle
+- capsule
+- rectangle
+- circle
+- rectangle
+- capsule
+- circle
+- rectangle
+- rectangle
+- rectangle
+- rectangle
+- capsule
+- rectangle
+- circle
+- rectangle
+- circle
+length: '0.1'
+method: fenics
+monitoring_sampling:
+- - file
+  - u_pos_D2.mat
+ndim: '2'
+nx: '200'
+positions:
+- - 17.5
+  - 183.35
+- - 60.6
+  - 18
+- - 21
+  - 150.5
+- - 118.15
+  - 107.05
+- - 118.05
+  - 55.9
+- - 10.1
+  - 11.7
+- - 187.3
+  - 186.3
+- - 66.45
+  - 175.8
+- - 132.6
+  - 184.65
+- - 21.75
+  - 61.3
+- - 173.45
+  - 100.4
+- - 31.05
+  - 117.05
+- - 182.1
+  - 13.45
+- - 60.9
+  - 56.1
+- - 99.35
+  - 143.2
+- - 168.7
+  - 150.8
+- - 176.65
+  - 58.8
+- - 62.9
+  - 89.4
+- - 127
+  - 14.65
+positions_type: grid
+power_distribution:
+- uniform
+- uniform
+- uniform
+- uniform
+- uniform
+- uniform
+- uniform
+- uniform
+- uniform
+- uniform
+- uniform
+- uniform
+- uniform
+- uniform
+- uniform
+- uniform
+- uniform
+- uniform
+- uniform
+powers:
+- - gumbel
+  - 30000
+  - 6000
+- - lognormal
+  - 38900
+  - 9092
+- - normal
+  - 35000
+  - 5000
+- - gumbel
+  - 41200
+  - 9140
+- - lognormal
+  - 36000
+  - 8024
+- - normal
+  - 12000
+  - 1590
+- - uniform
+  - 100
+  - 12000
+- - gumbel
+  - 31200
+  - 7150
+- - normal
+  - 40000
+  - 5521
+- - uniform
+  - 2000
+  - 30000
+- - normal
+  - 31000
+  - 4311
+- - lognormal
+  - 28070
+  - 6100
+- - normal
+  - 29800
+  - 4321
+- - uniform
+  - 0
+  - 10000
+- - uniform
+  - 500
+  - 28000
+- - gumbel
+  - 28900
+  - 7216
+- - lognormal
+  - 22100
+  - 5021
+- - normal
+  - 22000
+  - 2521
+- - uniform
+  - 100
+  - 13000
+prefix: Example
+sample_n: '20000'
+seed: 3184311152
+special: n
+special_num: '0'
+task: continuous
+u_D: '298'
+units:
+- - 0.0081
+  - 0.0084
+- - 0.0182
+  - 0.0082
+- - 0.0166
+  - 0.0057
+- - 0.0111
+  - 0.0111
+- - 0.0232
+  - 0.0065
+- - 0.005
+  - 0.005
+- - 0.0065
+  - 0.0065
+- - 0.0131
+  - 0.0068
+- - 0.0327
+  - 0.005
+- - 0.0112
+  - 0.0112
+- - 0.011
+  - 0.0084
+- - 0.0094
+  - 0.0083
+- - 0.0103
+  - 0.0062
+- - 0.005
+  - 0.005
+- - 0.0158
+  - 0.0054
+- - 0.0163
+  - 0.005
+- - 0.0085
+  - 0.0085
+- - 0.0085
+  - 0.0072
+- - 0.0069
+  - 0.0069
+worker: 64
